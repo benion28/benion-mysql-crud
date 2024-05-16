@@ -11,6 +11,10 @@ const getEmployees = async (request, response) => {
         // response.send(rows[0])
     } catch (error) {
         console.log("Get All Employees Error", error)
+        return response.status(500).json({
+            success: false, 
+            error
+        })
     }
     // db.query("SELECT * FROM employees")
     //     .then(data => response.send(data[0]))

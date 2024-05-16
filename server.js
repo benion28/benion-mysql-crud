@@ -9,9 +9,9 @@ const port = process.env.PORT || 3000
 connectDb()
 
 // Middleware
-app.use("/api", require("./routes/employee.js"))
+app.use("/api", require("./routes/employee"))
 
 // Listen to Server
-app.listen(() => {
+app.listen(port, () => {
     console.log("Server Running at Port: ", port)
 })
